@@ -1,0 +1,116 @@
+<!-- 3. A long page which should have two links "click to go to bottom of page" and "click to 
+go to top of page" . Also set their scroll-behavior to scroll smoothly. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smooth Scroll Page</title>
+    <style>
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            background: linear-gradient(to bottom, #736ff8, #91a4fc);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .scroll-link {
+            display: inline-block;
+            margin: 20px;
+            font-size: 18px;
+            text-decoration: none;
+            color: white;
+            background: #333;
+            padding: 12px 20px;
+            border-radius: 25px;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .scroll-link:hover {
+            background: #ff6f61;
+            transform: scale(1.1);
+        }
+
+        .content {
+            height: 1500px; 
+            text-align: center;
+            font-size: 24px;
+            padding-top: 50px;
+        }
+
+        #bottom {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            color: #333;
+            font-weight: bold;
+            border-radius: 15px;
+            margin: 30px auto;
+            width: 60%;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .top-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #ff6f61;
+            color: white;
+            font-size: 18px;
+            padding: 10px 15px;
+            border-radius: 50%;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            display: none;
+            transition: all 0.3s ease;
+        }
+
+        .top-btn:hover {
+            background: #222;
+        }
+
+        .show {
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Link to go to the bottom -->
+    <a href="#bottom" class="scroll-link">Go to Bottom ⬇️</a>
+
+    <!-- Long content -->
+    <div class="content">
+        <p>Scroll down to see the smooth scrolling effect...</p>
+    </div>
+
+    <!-- Bottom Section -->
+    <div id="bottom">
+        <p>🎉 You reached the bottom!</p>
+        <a href="#top" class="scroll-link">Go to Top ⬆️</a>
+    </div>
+
+    <!-- Floating Back-to-Top Button -->
+    <a href="#top" class="top-btn" id="topBtn">🔝</a>
+
+    <script>
+        // Show "Back to Top" button when scrolling down
+        window.onscroll = function() {
+            let topBtn = document.getElementById("topBtn");
+            if (document.documentElement.scrollTop > 300) {
+                topBtn.classList.add("show");
+            } else {
+                topBtn.classList.remove("show");
+            }
+        };
+    </script>
+
+</body>
+</html>

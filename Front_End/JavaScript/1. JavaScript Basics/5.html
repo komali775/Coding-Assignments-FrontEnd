@@ -1,0 +1,94 @@
+<!-- 5. Write a program with variable hoisting(initialization first then declaration). -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Variable Hoisting</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #ece9e6, #ffffff);
+            text-align: center;
+            padding: 50px;
+        }
+
+        .container {
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+            width: 40%;
+            margin: auto;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .container:hover {
+            transform: scale(1.02);
+        }
+
+        h1 {
+            color: #444;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+
+        button:hover {
+            background: linear-gradient(to right, #2575fc, #6a11cb);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        #output {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            padding: 10px;
+            border-radius: 5px;
+            background: #f8f9fa;
+            display: inline-block;
+            min-width: 180px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>JavaScript Variable Hoisting</h1>
+    <div class="container">
+        <p>Click the button below to see variable hoisting in action.</p>
+        <button onclick="showHoisting()">Show Hoisting</button>
+        <p id="output"></p>
+    </div>
+
+    <script>
+        function showHoisting() {
+            // Variable initialization before declaration
+            num = 10;
+            var num; // Declaration is hoisted
+
+            document.getElementById("output").innerHTML = `Value of num: ${num}`;
+        }
+    </script>
+
+</body>
+</html>

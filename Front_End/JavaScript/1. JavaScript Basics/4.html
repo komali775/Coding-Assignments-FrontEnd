@@ -1,0 +1,110 @@
+<!-- 4. Create an object "person" with properties firstname and lastname. 
+Display these properties using 2 different ways of accessing. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Object Properties</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #d9e2ec, #f0f4f8); 
+            text-align: center;
+            padding: 50px;
+            color: #333;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #3d405b;
+        }
+
+        .container {
+            background: #edf2f7; 
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+            width: 50%;
+            margin: auto;
+            transition: all 0.3s ease;
+        }
+
+        .container:hover {
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+            transform: translateY(-4px);
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: 300;
+            opacity: 0.9;
+            margin-bottom: 20px;
+            color: #3d405b;
+        }
+
+        button {
+            background: linear-gradient(to right, #56ccf2, #6a82fb); 
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button:hover {
+            background: #5596e6; 
+            transform: scale(1.05);
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        #output {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: 600;
+            color: #3d405b;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Access Object Properties</h1>
+    <div class="container">
+        <p>Click the button below to display person details.</p>
+        <button onclick="displayPerson()">Show Person</button>
+        <p id="output"></p>
+    </div>
+
+    <script>
+        function displayPerson() {
+            let person = {
+                firstname: "Komali",
+                lastname: "Bojja"
+            };
+
+            let method1 = `Dot Notation: ${person.firstname} ${person.lastname}`;
+            let method2 = `Bracket Notation: ${person["firstname"]} ${person["lastname"]}`;
+
+            document.getElementById("output").innerHTML = method1 + "<br>" + method2;
+        }
+    </script>
+
+</body>
+</html>

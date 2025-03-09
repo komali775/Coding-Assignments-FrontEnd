@@ -1,0 +1,99 @@
+<!-- 1. Create a table and apply table-layout as fixed and none. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish Table Layout</title>
+    <style>
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            margin: 20px;
+            background: linear-gradient(to right, #74ebd5, #acb6e5);
+            color: #333;
+        }
+
+        h2 {
+            font-size: 26px;
+            color: #fff;
+            background: rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th, td {
+            border: 2px solid #333;
+            padding: 15px;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        th {
+            background-color: #2c3e50;
+            color: white;
+            text-transform: uppercase;
+        }
+
+        td {
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        tr:hover {
+            background-color: rgba(255, 255, 255, 0.6);
+            transition: 0.3s ease-in-out;
+        }
+
+        .table-fixed {
+            table-layout: fixed;
+        }
+
+        .table-auto {
+            table-layout: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>🌟 Table with Fixed Layout 🌟</h2>
+    <table class="table-fixed">
+        <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Column 3</th>
+        </tr>
+        <tr>
+            <td>This is a long text that will be cut off due to fixed width.</td>
+            <td>Short</td>
+            <td>Some more text</td>
+        </tr>
+    </table>
+
+    <h2>✨ Table with Auto Layout ✨</h2>
+    <table class="table-auto">
+        <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Column 3</th>
+        </tr>
+        <tr>
+            <td>This is a long text and will automatically adjust based on content.</td>
+            <td>Short</td>
+            <td>Some more text</td>
+        </tr>
+    </table>
+
+</body>
+</html>

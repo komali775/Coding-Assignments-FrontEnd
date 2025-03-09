@@ -1,0 +1,110 @@
+<!-- 4. Write functions to set a cookie, get a cookie and check a cookie in a single program. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Management</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #d1f4fa, #ffe6e6); 
+            text-align: center;
+            padding: 50px;
+            color: #333;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            width: 50%;
+            margin: auto;
+        }
+
+        input {
+            padding: 10px;
+            width: 80%;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            background: linear-gradient(to right, #00bcd4, #ff7043); 
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: 0.3s ease;
+        }
+
+        button:hover {
+            background: #ff7043;
+            transform: scale(1.05);
+        }
+
+        p {
+            font-size: 18px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Cookie Management in JavaScript</h1>
+    <div class="container">
+        <p>Enter your name and store it as a cookie.</p>
+        <input type="text" id="username" placeholder="Enter your name">
+        <button onclick="setCookie()">Set Cookie</button>
+        <button onclick="checkCookie()">Check Cookie</button>
+        <p id="output"></p>
+    </div>
+
+    <script>
+        function setCookie() {
+            let name = document.getElementById("username").value;
+            if (name !== "") {
+                document.cookie = `username=${name}; expires=Fri, 31 Dec 2030 23:59:59 UTC; path=/`;
+                document.getElementById("output").innerHTML = "Cookie has been set!";
+            } else {
+                alert("Please enter a name.");
+            }
+        }
+
+        function getCookie(name) {
+            let cookies = document.cookie.split("; ");
+            for (let cookie of cookies) {
+                let [key, value] = cookie.split("=");
+                if (key === name) {
+                    return value;
+                }
+            }
+            return "";
+        }
+
+        function checkCookie() {
+            let user = getCookie("username");
+            if (user !== "") {
+                document.getElementById("output").innerHTML = "Welcome back, " + user + "!";
+            } else {
+                document.getElementById("output").innerHTML = "No cookie found. Please set one.";
+            }
+        }
+    </script>
+
+</body>
+</html>

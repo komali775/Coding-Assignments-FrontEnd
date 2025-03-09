@@ -1,0 +1,197 @@
+<!-- 3. Use all the HTML5 tags and develop a web page 
+article, aside, figcaption, figure,footer,header, hgroup,mark,nav, section,time -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Semantic HTML Web Page</title>
+    <style>
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #dfe9f3, #ffffff);
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(to right, #007bff, #0056b3);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        nav {
+            background: #00479b;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            font-weight: bold;
+            font-size: 18px;
+            padding: 10px 15px;
+            transition: all 0.3s ease;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background: #007bff;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        main {
+            display: flex;
+            padding: 40px;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        section {
+            flex: 2;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        aside {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        article {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        figure {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        figure img {
+            width: 80%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        figcaption {
+            font-style: italic;
+            color: #555;
+            margin-top: 8px;
+        }
+
+        mark {
+            background-color: #ffe600;
+            padding: 3px;
+            border-radius: 5px;
+        }
+
+        aside ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        aside li {
+            margin: 10px 0;
+        }
+
+        aside a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        aside a:hover {
+            color: #00479b;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+            font-size: 16px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <hgroup>
+            <h1>Welcome to My Web Page</h1>
+            <h2>Using HTML5 Semantic Elements</h2>
+        </hgroup>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Section -->
+        <section>
+            <h2>Main Content</h2>
+            
+            <!-- Article -->
+            <article>
+                <h3>What is HTML?</h3>
+                <p>HTML stands for <mark>HyperText Markup Language</mark> and is used to create webpages.</p>
+                <p>It provides structure to a webpage using semantic elements.</p>
+            </article>
+
+            <!-- Figure -->
+            <figure>
+                <img src="https://e7.pngegg.com/pngimages/780/934/png-clipart-html-logo-html5-logo-icons-logos-emojis-tech-companies-thumbnail.png" alt="HTML5 Logo">
+                <figcaption>A sample image with a caption.</figcaption>
+            </figure>
+
+            <!-- Time -->
+            <p>Published on: <time datetime="2025-03-07">March 7, 2025</time></p>
+        </section>
+
+        <!-- Aside (Sidebar) -->
+        <aside>
+            <h3>Related Links</h3>
+            <ul>
+                <li><a href="#">HTML Basics</a></li>
+                <li><a href="#">CSS Styling</a></li>
+                <li><a href="#">JavaScript Tutorials</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 My Web Page | Designed by Komali</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!-- 3. Write a program with FOR/IN loop. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript for...in Loop</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            text-align: center;
+            padding: 50px;
+            color: white;
+        }
+
+        h1 {
+            color: #ffcc00;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            width: 50%;
+            margin: auto;
+            backdrop-filter: blur(10px);
+            transition: 0.3s;
+        }
+
+        .container:hover {
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        button {
+            background: linear-gradient(to right, #ffcc00, #ff9900);
+            color: black;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: 0.3s ease;
+        }
+
+        button:hover {
+            background: #ff9900;
+            transform: scale(1.1);
+        }
+
+        #output {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffcc00;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>JavaScript for...in Loop</h1>
+    <div class="container">
+        <p>Click the button below to display object properties.</p>
+        <button onclick="displayProperties()">Show Properties</button>
+        <p id="output"></p>
+    </div>
+
+    <script>
+        function displayProperties() {
+
+            let smartphone = {
+                Brand: "Apple",
+                Model: "iPhone 14 Pro",
+                Year: 2023,
+                Processor: "A16 Bionic"
+            };
+
+            let outputText = "Smartphone Details:<br>";
+
+            for (let key in smartphone) {
+                outputText += `${key}: ${smartphone[key]}<br>`;
+            }
+
+            document.getElementById("output").innerHTML = outputText;
+        }
+    </script>
+
+</body>
+</html>

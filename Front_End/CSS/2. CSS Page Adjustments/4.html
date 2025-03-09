@@ -1,0 +1,81 @@
+<!-- 4. Add padding and margin with different size and understand the difference between them.  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padding vs Margin</title>
+    <style>
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            background: linear-gradient(to right, #74ebd5, #acb6e5);
+            color: #fff;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 32px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: 300;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+
+        .box {
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            width: 50%;
+            margin: 30px auto;
+            padding: 20px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+        }
+
+        .box-small {
+            background: rgba(255, 127, 127, 0.5);
+            border: 2px solid rgba(255, 0, 0, 0.7);
+            padding: 10px;
+            margin: 10px auto;
+        }
+
+        .box-large {
+            background: rgba(144, 238, 144, 0.5);
+            border: 2px solid rgba(0, 128, 0, 0.7);
+            padding: 40px;
+            margin: 50px auto;
+        }
+
+        .box:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5);
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Understanding Padding vs Margin</h1>
+    <p><strong>Margin:</strong> Space <u>outside</u> the element.</p>
+    <p><strong>Padding:</strong> Space <u>inside</u> the element.</p>
+
+    <div class="container">
+        <div class="box">This box has <strong>medium</strong> padding (20px) and margin (30px).</div>
+        <div class="box box-small">This box has <strong>small</strong> padding (5px) and margin (10px).</div>
+        <div class="box box-large">This box has <strong>large</strong> padding (40px) and margin (50px).</div>
+    </div>
+
+</body>
+</html>

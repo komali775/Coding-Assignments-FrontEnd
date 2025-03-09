@@ -1,0 +1,165 @@
+<!-- 4.Use pseudo classes and elements into your webpage -->
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Classes & Elements</title>
+    <style>
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #ece9e6, #ffffff);
+            text-align: center;
+            padding: 20px;
+            color: #444;
+        }
+
+        h1 {
+            position: relative;
+            color: #333;
+            padding: 10px;
+            display: inline-block;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        h1::before {
+            content: "🌟 ";
+            color: goldenrod;
+        }
+
+        h1::after {
+            content: " 🌟";
+            color: goldenrod;
+        }
+
+        a {
+            color: #1e3a5f;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
+        }
+
+        a:hover {
+            color: goldenrod;
+            text-decoration: underline;
+            letter-spacing: 1px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            font-size: 18px;
+            padding: 12px;
+            margin: 5px;
+            border-radius: 5px;
+            transition: all 0.3s;
+            background: #f4f4f4;
+            border: 1px solid #ddd;
+        }
+
+        ul li:nth-child(odd) {
+            background-color: #f0f0f0;
+        }
+
+        ul li:nth-child(even) {
+            background-color: #e6e6e6;
+        }
+
+        ul li:hover {
+            transform: scale(1.05);
+            background: goldenrod;
+            color: white;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        p::first-letter {
+            font-size: 30px;
+            font-weight: bold;
+            color: goldenrod;
+        }
+
+        /* Form Styling */
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
+            width: 50%;
+            margin: 20px auto;
+        }
+
+        input[type="text"], input[type="email"] {
+            width: 80%;
+            padding: 12px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+
+        input:focus {
+            border-color: goldenrod;
+            outline: none;
+            box-shadow: 0 0 10px rgba(218, 165, 32, 0.6);
+            transform: scale(1.02);
+        }
+
+        input::placeholder {
+            color: gray;
+            font-style: italic;
+        }
+
+        input[type="submit"] {
+            background: linear-gradient(to right, goldenrod, #d4a017);
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background: darkgoldenrod;
+            transform: scale(1.1);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Pseudo Classes & Elements</h1>
+    
+    <h2>Styled Paragraph</h2>
+    <p>HTML and CSS allow you to create beautiful and interactive webpages.</p>
+    
+    <h2>Links</h2>
+    <p>Visit <a href="https://jalaacademy.com/" target="_blank">Jala Academy</a> to fill the gaps between academic education and the practical IT world in the current industry.</p>
+    
+    <h2>Styled List</h2>
+    <ul>
+        <li>Komali</li>
+        <li>Bhavana</li>
+        <li>Satya</li>
+        <li>Anusha</li>
+    </ul>
+    
+    <h2>Form with Pseudo Elements</h2>
+    <form>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" placeholder="Enter your name"><br><br>
+        
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" placeholder="Enter your email"><br><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>

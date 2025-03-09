@@ -1,0 +1,81 @@
+<!-- 1. Write a program which consist of single line and multiline comments. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Comments</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #dfe9f3, #ffffff);
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            width: 50%;
+            margin: auto;
+        }
+
+        button {
+            background: linear-gradient(to right, #007bff, #0056b3);
+            color: white;
+            padding: 12px 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+            transition: 0.3s ease;
+        }
+
+        button:hover {
+            background: #00479b;
+            transform: scale(1.05);
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>JavaScript Comments</h1>
+    <div class="container">
+        <p>Click the button below to see the sum of two numbers.</p>
+        <button onclick="calculateSum()">Calculate Sum</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        // This is a single-line comment: Defining a function
+
+        /*
+           This is a multi-line comment:
+           The function below calculates the sum of two numbers
+           and displays it inside the paragraph with id 'result'.
+        */
+        function calculateSum() {
+            let num1 = 5;  // First number
+            let num2 = 10; // Second number
+            let sum = num1 + num2; // Adding the numbers
+
+            document.getElementById("result").innerText = "Sum: " + sum; // Displaying result
+        }
+    </script>
+
+</body>
+</html>

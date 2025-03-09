@@ -1,0 +1,98 @@
+<!-- 4. Develop a page and set the height:(in pixels and %) and width:(in pixels and %) on elements. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Height & Width</title>
+    <style>
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #333;
+            margin-top: 20px;
+        }
+
+        .container {
+            width: 80%;  
+            height: 50vh; 
+            background: linear-gradient(to right, #76b2fe, #b69efe);
+            margin: 20px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid navy;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            font-size: 20px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .fixed-box {
+            width: 300px;  
+            height: 150px; 
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid rgb(238, 7, 7);
+            border-radius: 10px;
+            margin: 20px auto;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .responsive-box {
+            width: 60%; 
+            height: 40%; 
+            background: linear-gradient(to right, #56ab2f, #a8e063);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid darkgreen;
+            border-radius: 10px;
+            margin: 20px auto;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .fixed-box:hover, .responsive-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Height & Width</h1>
+
+    <div class="container">
+        <p>The width is 80% and the height is 50%.</p>
+    </div>
+
+    <div class="fixed-box">
+        <p>Fixed Box (300px x 150px)</p>
+    </div>
+
+    <div class="responsive-box">
+        <p>Responsive Box (60% width, 40% height)</p>
+    </div>
+
+</body>
+</html>

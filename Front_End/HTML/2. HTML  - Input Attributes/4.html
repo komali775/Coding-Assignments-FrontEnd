@@ -1,0 +1,81 @@
+<!-- 4. Develop a web page using target attribute. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Target Attribute</title>
+    <style>
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #dfe9f3, #ffffff);
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .link-box {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 50%;
+            margin: 20px auto;
+            text-align: left;
+            transition: 0.3s ease;
+        }
+
+        .link-box:hover {
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        a {
+            display: block;
+            padding: 12px;
+            margin: 5px 0;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            background: linear-gradient(to right, #007bff, #0056b3);
+            border-radius: 8px;
+            text-align: center;
+            transition: 0.3s ease;
+        }
+
+        a:hover {
+            background: #00479b;
+            transform: scale(1.05);
+        }
+
+        a:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Using the Target Attribute</h1>
+    
+    <div class="link-box">
+        <h2>Click on the links to see different `target` behaviors:</h2>
+
+        <a href="https://www.google.com" target="_blank">🔗 Open Google in a New Tab </a>
+        <a href="https://www.wikipedia.org" target="_self">📖 Open Wikipedia in the Same Tab </a>
+        <a href="https://www.github.com" target="_new">💻 Open GitHub in a New Window</a>
+        <a href="https://jalaacademy.com/" target="_parent">🎓 Open Jala Academy in the Parent Frame</a>
+        <a href="https://www.amazon.com" target="_top">🛒 Open Amazon in Full Window</a>
+    </div>
+
+</body>
+</html>

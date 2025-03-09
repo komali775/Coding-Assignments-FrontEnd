@@ -1,0 +1,97 @@
+<!-- 1. Write program using this keyword when we click on button, it should be disappear. --> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegant Button Disappear Effect</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #f7d9c4, #fbe8d3); 
+            text-align: center;
+            padding: 50px;
+            color: #3d405b;
+        }
+
+        h1 {
+            font-size: 34px;
+            font-weight: 600;
+            margin-bottom: 25px;
+            color: #2b2d42;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            width: 50%;
+            margin: auto;
+            transition: all 0.3s ease;
+        }
+
+        .container:hover {
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+            transform: translateY(-4px);
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: 400;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        button {
+            background: linear-gradient(to right, #ff758c, #ff7eb3); 
+            color: white;
+            padding: 14px 28px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+            outline: none;
+        }
+
+        button:hover {
+            background: #ff5a86; 
+            transform: scale(1.07);
+            box-shadow: 0 7px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Click the Button to Make it Disappear</h1>
+    <div class="container">
+        <p>Try clicking the button below and see what happens!</p>
+        <button onclick="hideButton(this)">Click Me</button>
+    </div>
+
+    <script>
+        function hideButton(button) {
+            button.style.transition = "opacity 0.5s ease, transform 0.5s ease"; 
+            button.style.opacity = "0";
+            button.style.transform = "scale(0.8)";
+            setTimeout(() => button.style.display = "none", 500); 
+        }
+    </script>
+
+</body>
+</html>

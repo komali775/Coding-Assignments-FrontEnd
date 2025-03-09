@@ -1,0 +1,79 @@
+<!-- 1. Develop a web page with non-semantic elements <div> and <span> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Non-Semantic Elements: div & span</title>
+    <style>
+ 
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #dfe9f3, #ffffff);
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+            color: #333;
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 15px;
+            width: 60%;
+            margin: 20px auto;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .box {
+            background: linear-gradient(to right, #007bff, #0056b3);
+            color: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .box:hover {
+            transform: scale(1.05);
+        }
+
+        .highlight {
+            color: #e74c3c;
+            font-weight: bold;
+            background: rgba(231, 76, 60, 0.1);
+            padding: 2px 5px;
+            border-radius: 4px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Using Non-Semantic Elements: &lt;div&gt; and &lt;span&gt;</h1>
+
+    <!-- div for layout -->
+    <div class="container">
+        <h2>Div Example</h2>
+        <div class="box">This is a block-level element using `<div>`.</div>
+        <div class="box">Another block-level section using `<div>`.</div>
+    </div>
+
+    <!-- span for inline styling -->
+    <p>This is a normal paragraph, but <span class="highlight">this part is highlighted</span> using `<span>`.</p>
+
+    <p>Another example: <span class="highlight">Hello!</span> I am Komali.</p>
+
+</body>
+</html>

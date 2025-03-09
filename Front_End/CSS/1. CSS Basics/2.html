@@ -1,0 +1,73 @@
+<!-- 2. Create a page with different background-colour of a page and set an image as the 
+background-image of a page (image should not scroll with the rest of the page and 
+specify the size of a background image) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Image</title>
+    <style>
+
+        body {
+            background-color: lightblue;
+            background-image: url('https://png.pngtree.com/background/20230618/original/pngtree-lakescape-landscape-nature-scenery-hd-picture-image_3712644.jpg'); 
+            background-size: cover; 
+            background-attachment: fixed; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+            height: 100vh; 
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .content {
+            background: rgba(255, 255, 255, 0.2); 
+            backdrop-filter: blur(10px); 
+            padding: 30px;
+            width: 50%;
+            height: 200%;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .content:hover {
+            transform: scale(1.02);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .content h1{
+            color: white;
+            font-size: 30px;
+            opacity: 0.9;
+        } 
+        .content p {
+            color: white;
+            font-size: 20px;
+            opacity: 0.9; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content">
+        <h1>Welcome to My Web Page</h1>
+        <p>Paragraph on nature</p>
+        <p>Nature is the source of our living, providing us with food, clothing, and shelter.</p>
+        <p>Nature is a protective layer that guards us against all kinds of damages and harms.</p> 
+        <p>Nature is a natural cycle that ensures the smooth functioning of every living being.</p> 
+        <p>Nature is beautiful and diverse, and people have always appreciated and valued it.</p> 
+        <p>Nature is under threat from deforestation, pollution, and over-exploitation of natural resources.</p> 
+        <p>It is essential to reduce biological damage, reuse things, and recycle existing materials to create new ones.</p> 
+        <p>We should avoid over-dependence on fossil fuels like coal, petroleum products, and firewood.</p> 
+        <p>We should start using non-conventional sources of energy like the sun, biogas, and wind.</p>
+        <p>We should check deforestation and take up the planting of trees at a massive rate.</p>
+    </div>
+
+</body>
+</html>

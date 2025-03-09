@@ -1,0 +1,113 @@
+<!-- 2. Invoke a function using call() and apply(). Also Spot the difference between them. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>call() vs apply()</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #ffb997, #ff9a76);
+            text-align: center;
+            padding: 50px;
+            color: #2b2d42;
+        }
+
+        h1 {
+            font-size: 34px;
+            font-weight: 600;
+            color: #22223b;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            width: 60%;
+            margin: auto;
+            transition: all 0.3s ease;
+        }
+
+        .container:hover {
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+            transform: translateY(-4px);
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: 400;
+            margin-bottom: 20px;
+            color: #444;
+        }
+
+        button {
+            background: linear-gradient(to right, #ff6363, #ff847c); /* Warm Coral Gradient */
+            color: white;
+            padding: 14px 28px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+            outline: none;
+        }
+
+        button:hover {
+            background: #ff4d4d;
+            transform: scale(1.07);
+            box-shadow: 0 7px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        #output {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: 600;
+            color: #22223b;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Understanding call() vs apply()</h1>
+    <div class="container">
+        <p>Click the button below to see how <b>call()</b> and <b>apply()</b> invoke a function.</p>
+        <button onclick="invokeFunction()">Invoke Function</button>
+        <p id="output"></p>
+    </div>
+
+    <script>
+        function showDetails(city, country) {
+            return `${this.name} is ${this.age} years old and lives in ${city}, ${country}.`;
+        }
+
+        function invokeFunction() {
+            let person = { name: "Komali", age: 20 };
+
+            let callResult = showDetails.call(person, "Hyderabad", "India"); 
+            let applyResult = showDetails.apply(person, ["Bangalore", "India"]); 
+
+            document.getElementById("output").innerHTML = 
+                `<b>Using call():</b> ${callResult} <br> 
+                 <b>Using apply():</b> ${applyResult}`;
+        }
+    </script>
+
+</body>
+</html>

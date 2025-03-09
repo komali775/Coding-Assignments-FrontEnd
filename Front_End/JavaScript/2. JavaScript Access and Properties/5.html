@@ -1,0 +1,140 @@
+<!-- 5. Add some more properties to an existing function using object prototypes. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter with Prototype Methods</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #ffb677, #ff8364);
+            text-align: center;
+            padding: 50px;
+            color: #2b2d42;
+        }
+
+        h1 {
+            font-size: 34px;
+            font-weight: 600;
+            color: #2d1e2f;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            width: 50%;
+            margin: auto;
+            transition: all 0.3s ease;
+        }
+
+        .container:hover {
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+            transform: translateY(-4px);
+        }
+
+        #counter {
+            font-size: 50px;
+            font-weight: 700;
+            color: #e63946;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+            transition: all 0.2s ease-in-out;
+        }
+
+        button {
+            background: linear-gradient(to right, #ff6b6b, #ff4757);
+            color: white;
+            padding: 14px 28px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+            outline: none;
+            margin: 5px;
+        }
+
+        button:hover {
+            background: #ff4757;
+            transform: scale(1.07);
+            box-shadow: 0 7px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Counter with Prototypes</h1>
+    <div class="container">
+        <p id="counter">0</p>
+        <button onclick="counter.increment()">Increase</button>
+        <button onclick="counter.decrement()">Decrease</button>
+        <button onclick="counter.reset()">Reset</button>
+        <button onclick="counter.double()">Double</button>
+        <button onclick="counter.half()">Half</button>
+    </div>
+
+    <script>
+        function Counter() {
+            this.value = 0;
+        }
+
+        // Add methods using prototype
+        Counter.prototype.increment = function() {
+            this.value++;
+            this.updateUI();
+        };
+
+        Counter.prototype.decrement = function() {
+            if (this.value > 0) {
+                this.value--;
+                this.updateUI();
+            }
+        };
+
+        Counter.prototype.reset = function() {
+            this.value = 0;
+            this.updateUI();
+        };
+
+        // New prototype method to double the value
+        Counter.prototype.double = function() {
+            this.value *= 2;
+            this.updateUI();
+        };
+
+        // New prototype method to half the value
+        Counter.prototype.half = function() {
+            this.value = Math.floor(this.value / 2);
+            this.updateUI();
+        };
+
+        Counter.prototype.updateUI = function() {
+            let counterElement = document.getElementById("counter");
+            counterElement.textContent = this.value;
+
+            counterElement.style.transform = "scale(1.2)";
+            setTimeout(() => counterElement.style.transform = "scale(1)", 200);
+        };
+
+        let counter = new Counter();
+    </script>
+
+</body>
+</html>

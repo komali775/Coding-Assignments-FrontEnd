@@ -1,0 +1,225 @@
+<!-- 2.Develop your own web page basics.html with all the following html tags 
+Html, head, title, body Heading, Paragraph, Italic, Bold, Anchor, Unordered 
+List, List Item,label,Blockquote, Horizontal rule, Image, Division, Span -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Page Basics</title>
+    <style>
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #e3f2fd, #f8f9fa);
+            text-align: center;
+            padding: 20px;
+            color: #333;
+            margin: 0;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 15px;
+            width: 70%;
+            margin: auto;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3 {
+            color: #0277bd;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        ul {
+            list-style-type: circle;
+            padding: 0;
+        }
+
+        li {
+            display: inline-block;
+            margin: 5px 15px;
+            font-size: 18px;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 8px;
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        li:hover {
+            transform: scale(1.1);
+            background: rgba(255, 255, 255, 1);
+            color: #0288d1;
+        }
+
+        a {
+            color: #0288d1;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
+        }
+
+        a:hover {
+            color: #ff7043;
+            text-decoration: underline;
+            letter-spacing: 1px;
+        }
+
+        blockquote {
+            font-style: italic;
+            color: #444;
+            border-left: 4px solid #0277bd;
+            padding-left: 10px;
+            margin: 20px auto;
+            width: 60%;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        img {
+            display: block;
+            height: 250px;
+            width: 250px;
+            margin: 15px auto;
+            border-radius: 50%;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+
+        form {
+            background: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            width: 50%;
+            margin: 20px auto;
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            width: 80%;
+            padding: 12px;
+            margin: 5px 0;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+
+        input[type="text"]::placeholder,
+        input[type="email"]::placeholder {
+            color: #777;
+            font-style: italic;
+        }
+
+        input:focus {
+            border: 1px solid #0288d1;
+            box-shadow: 0 0 10px rgba(2, 136, 209, 0.5);
+            transform: scale(1.02);
+        }
+
+        input[type="submit"] {
+            background: linear-gradient(to right, #0277bd, #0288d1);
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background: #ff7043;
+            transform: scale(1.1);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .highlight-box {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 15px;
+            margin: 20px auto;
+            width: 50%;
+            border-radius: 10px;
+            transition: transform 0.3s;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .highlight-box:hover {
+            transform: scale(1.05);
+            background: rgba(255, 255, 255, 1);
+        }
+
+        .highlight-box span {
+            color: #d32f2f;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>My Web Page</h1>
+        
+        <h2>Headings and Paragraphs</h2>
+        <p>This is a paragraph demonstrating <i>italic</i> and <b>bold</b> text.</p>
+        <p><i>My name is <b>Bojja Harshini Naga Komali.</b></i> I am pursuing <b>Bachelor of Computer Applications</b> at Aditya Degree College for Women, Kakinada.</p>
+        
+        <h2>Unordered List</h2>
+        <ul>
+            <li>Item One</li>
+            <li>Item Two</li>
+            <li>Item Three</li>
+        </ul>
+        
+        <h2>Anchor Tag</h2>
+        <p>Visit <a href="https://jalaacademy.com/" target="_blank">Jala Academy</a> to fill the gaps between academic education and the practical IT world in the current industry.</p>
+        
+        <h2>Blockquote</h2>
+        <blockquote>
+            "The only limit to our realization of tomorrow is our doubts of today." - Franklin D. Roosevelt
+        </blockquote>
+        
+        <hr>
+        
+        <h2>Image</h2>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQHp4kxa0g-b3iqrhybtnLvWz6iWptIb-LYQ&s" alt="Image">
+        
+        <h2>Form Elements</h2>
+        <form>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" placeholder="Enter your name"><br><br>
+            
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" placeholder="Enter your email"><br><br>
+            
+            <input type="submit" value="Submit">
+        </form>
+        
+        <h2>Division and Span</h2>
+        <div class="highlight-box">
+            <p>This is a <span>highlighted</span> text inside a division.</p>
+        </div>
+    </div>
+
+</body>
+</html>

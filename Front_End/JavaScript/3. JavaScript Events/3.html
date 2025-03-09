@@ -1,0 +1,98 @@
+<!-- 3. How console.log() can be used for Debugging. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Console.log() Debugging</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #e3f2fd, #c8e6c9); 
+            text-align: center;
+            padding: 50px;
+            color: #333;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            width: 50%;
+            margin: auto;
+        }
+
+        button {
+            background: linear-gradient(to right, #42a5f5, #00796b); 
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+            transition: 0.3s ease;
+        }
+
+        button:hover {
+            background: #00796b;
+            transform: scale(1.05);
+        }
+
+        p {
+            font-size: 18px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Debugging with console.log()</h1>
+    <div class="container">
+        <p>Click the button below to see debugging messages in the console.</p>
+        <button onclick="debugFunction()">Run Debugging</button>
+        <p>Open Developer Console (F12 or Ctrl + Shift + I) to see logs.</p>
+    </div>
+
+    <script>
+        function debugFunction() {
+            console.log("Function debugFunction() is called!");
+
+            let number1 = 10;
+            let number2 = 20;
+            console.log("number1:", number1);
+            console.log("number2:", number2);
+
+            let sum = number1 + number2;
+            console.log("Sum of number1 and number2:", sum);
+
+            let message = "Debugging in progress!";
+            console.log("Message:", message);
+
+            let fruits = ["Apple", "Banana", "Cherry"];
+            console.log("Fruits array:", fruits);
+
+            try {
+                let undefinedVar;
+                console.log("Accessing undefined variable:", undefinedVar.toUpperCase());
+            } catch (error) {
+                console.error("Error caught:", error);
+            }
+
+            console.warn("Warning: This is just a demo warning message!");
+
+            console.info("Info: Debugging process completed!");
+        }
+    </script>
+
+</body>
+</html>

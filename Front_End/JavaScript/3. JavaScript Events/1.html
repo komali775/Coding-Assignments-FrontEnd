@@ -1,0 +1,103 @@
+<!-- 1. Add an event listener to a button. When we click on it it should display current date and time. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Current Date & Time</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #5c4d3d, #8a705b); 
+            text-align: center;
+            padding: 50px;
+            color: #2b2d42;
+        }
+
+        h1 {
+            font-size: 34px;
+            font-weight: 600;
+            color: #fafdfe;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            width: 50%;
+            margin: auto;
+            transition: all 0.3s ease;
+        }
+
+        .container:hover {
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+            transform: translateY(-4px);
+        }
+
+        #output {
+            font-size: 22px;
+            font-weight: 600;
+            color: #3a5a40;
+            margin: 20px 0;
+            transition: all 0.2s ease-in-out;
+        }
+
+        button {
+            background: linear-gradient(to right, #3e2723, #5d4037); 
+            color: white;
+            padding: 14px 28px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+            outline: none;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background: #4e342e;
+            transform: scale(1.07);
+            box-shadow: 0 7px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Display Current Date & Time</h1>
+    <div class="container">
+        <p>Click the button below to see the current date and time.</p>
+        <button id="showDateTime">Show Date & Time</button>
+        <p id="output"></p>
+    </div>
+
+    <script>
+        document.getElementById("showDateTime").addEventListener("click", function() {
+            let now = new Date();
+            let formattedDateTime = now.toLocaleString(); 
+            let outputElement = document.getElementById("output");
+
+            outputElement.innerHTML = formattedDateTime;
+
+            outputElement.style.transform = "scale(1.2)";
+            setTimeout(() => outputElement.style.transform = "scale(1)", 200);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!-- 3. Create a grid with of different types. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            margin: 20px;
+            color: #333;
+        }
+
+        h2 {
+            font-size: 24px;
+            background: rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            color: #fff;
+        }
+
+        .container {
+            width: 90%;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .grid-box {
+            display: grid;
+            gap: 10px;
+            margin-bottom: 30px;
+            padding: 10px;
+        }
+
+        .grid-item {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .basic-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .auto-grid {
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        }
+
+        .masonry-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .masonry-grid .grid-item:nth-child(1) { grid-column: span 2; }
+        .masonry-grid .grid-item:nth-child(5) { grid-column: span 2; }
+        .masonry-grid .grid-item:nth-child(3) { grid-row: span 2; }
+
+    </style>
+</head>
+<body>
+
+    <h2>Basic Grid (3 Equal Columns)</h2>
+    <div class="container">
+        <div class="grid-box basic-grid">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>
+        </div>
+    </div>
+
+    <h2>Auto-Fit Grid (Responsive)</h2>
+    <div class="container">
+        <div class="grid-box auto-grid">
+            <div class="grid-item">A</div>
+            <div class="grid-item">B</div>
+            <div class="grid-item">C</div>
+            <div class="grid-item">D</div>
+            <div class="grid-item">E</div>
+            <div class="grid-item">F</div>
+        </div>
+    </div>
+
+    <h2>Masonry Grid (Different Sizes)</h2>
+    <div class="container">
+        <div class="grid-box masonry-grid">
+            <div class="grid-item">I</div>
+            <div class="grid-item">II</div>
+            <div class="grid-item">III</div>
+            <div class="grid-item">IV</div>
+            <div class="grid-item">V</div>
+            <div class="grid-item">VI</div>
+        </div>
+    </div>
+
+</body>
+</html>

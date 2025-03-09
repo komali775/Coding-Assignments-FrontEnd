@@ -1,0 +1,75 @@
+<!-- 4. Handling Overflow using scroll. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Overflow Scroll</title>
+    <style>
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            background: linear-gradient(135deg, #f8f9fa, #e3f2fd);
+            color: #444;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #ff6f61;
+            text-shadow: 2px 2px 5px rgba(255, 111, 97, 0.3);
+        }
+
+        .scroll-box {
+            width: 320px;
+            height: 180px;
+            border-radius: 12px;
+            border: 2px solid #555;
+            padding: 15px;
+            background: white;
+            overflow: auto; 
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .scroll-box:hover {
+            transform: scale(1.02);
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .scroll-box::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .scroll-box::-webkit-scrollbar-track {
+            background: #e0e0e0;
+            border-radius: 10px;
+        }
+
+        .scroll-box::-webkit-scrollbar-thumb {
+            background: #ff6f61;
+            border-radius: 10px;
+        }
+
+        .scroll-box::-webkit-scrollbar-thumb:hover {
+            background: #d14b3b;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>🖱️ Handling Overflow with Scroll</h1>
+
+    <div class="scroll-box">
+        <p>This is an example of a div with a fixed width and height. When the content exceeds the given space, the scroll bar appears.</p>
+        <p>As we keep adding more text, you'll see the scrollbar automatically appearing!</p>
+        <p>Keep scrolling to explore the effect!</p>
+        <p>HTML and CSS work together to create everything you see on the web. HTML structures the content, while CSS enhances its style and presentation.</p>
+    </div>
+
+</body>
+</html>

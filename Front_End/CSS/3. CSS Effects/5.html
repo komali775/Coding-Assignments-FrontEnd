@@ -1,0 +1,58 @@
+<!-- 5. Adding Opacity to a image -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Opacity Effect</title>
+    <style>
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            background: linear-gradient(135deg, #f8f9fa, #e3f2fd);
+            color: #444;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #ff6f61;
+            text-shadow: 2px 2px 5px rgba(255, 111, 97, 0.3);
+        }
+
+        .image-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-container img {
+            width: 320px;
+            height: auto;
+            opacity: 0.5;
+            border-radius: 12px;
+            box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.1);
+            transition: opacity 0.5s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        .image-container img:hover {
+            opacity: 1;
+            transform: scale(1.05);
+            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>✨ Image Opacity ✨</h1>
+
+    <div class="image-container">
+        <img src="https://i.pinimg.com/736x/c2/a7/1e/c2a71e9a9f662b0a5969799013f7248c.jpg" alt="Image">
+    </div>
+
+</body>
+</html>

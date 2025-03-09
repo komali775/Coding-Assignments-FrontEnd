@@ -1,0 +1,129 @@
+<!-- 2. Use CSS animations (name,duration,iteration-count & delay) and 
+paginations(Hoverable,with and without spaces). -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations & Pagination</title>
+    <style>
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            background: #fdf6e3; 
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-top: 30px;
+            color: #ff6b6b; 
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-top: 30px;
+            color: #3498db; 
+        }
+
+        /* Animation */
+        @keyframes fadeMove {
+            0% { opacity: 0; transform: translateY(-20px); }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .animated-box {
+            width: 220px;
+            height: 220px;
+            background: #ffffff; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 30px auto;
+            border-radius: 15px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+            animation: fadeMove 2s infinite;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .animated-box:hover {
+            transform: scale(1.1);
+            box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .animated-box img {
+            width: 200px;
+            height: 200px;
+            border-radius: 15px;
+        }
+
+        .pagination {
+            margin: 20px;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        .pagination li {
+            display: inline;
+            margin: 5px;
+        }
+
+        .pagination li a {
+            text-decoration: none;
+            color: white;
+            background: #56cfe1; 
+            padding: 12px 18px;
+            font-size: 18px;
+            border-radius: 8px;
+            transition: 0.3s;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .pagination li a:hover {
+            background: #48bfe3;
+            transform: scale(1.1);
+        }
+
+        .pagination.no-space li {
+            margin: 0;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>🌸 CSS Animations & Pagination 🌸</h1>
+
+    <!-- Animated Box with Image -->
+    <div class="animated-box">
+        <img src="https://i.pinimg.com/550x/f3/b5/8f/f3b58f860a9e8487e2eb7e853e1f4f8e.jpg" alt="Animated Image">
+    </div>
+
+    <!-- Pagination with spaces -->
+    <h2>Pagination (With Spaces)</h2>
+    <ul class="pagination">
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">Next</a></li>
+    </ul>
+
+    <!-- Pagination without spaces -->
+    <h2>Pagination (Without Spaces)</h2>
+    <ul class="pagination no-space">
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">Next</a></li>
+    </ul>
+
+</body>
+</html>

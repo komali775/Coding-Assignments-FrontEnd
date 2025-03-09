@@ -1,0 +1,168 @@
+<!-- 1.Understand the basics.html which was already created -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Basics</title>
+    <style>
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #2c3e50, #34495e);
+            text-align: center;
+            padding: 20px;
+            color: white;
+            margin: 0;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 15px;
+            width: 70%;
+            margin: auto;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        h1, h2, h3 {
+            color: #f1c40f;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        ol, ul {
+            display: inline-block;
+            text-align: left;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        li {
+            font-size: 18px;
+            margin: 5px;
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        li:hover {
+            transform: scale(1.05);
+            color: #f1c40f;
+        }
+
+        a {
+            color: #f1c40f;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
+        }
+
+        a:hover {
+            color: #e67e22;
+            text-decoration: underline;
+            letter-spacing: 1px;
+        }
+
+        form {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            width: 50%;
+            margin: 20px auto;
+        }
+
+        input[type="text"], input[type="email"], textarea {
+            width: 80%;
+            padding: 12px;
+            margin: 5px 0;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+
+        input[type="text"]::placeholder,
+        input[type="email"]::placeholder,
+        textarea::placeholder {
+            color: #ddd;
+            font-style: italic;
+        }
+
+        input:focus, textarea:focus {
+            border: 1px solid #f1c40f;
+            box-shadow: 0 0 10px rgba(241, 196, 15, 0.6);
+            transform: scale(1.02);
+        }
+
+        input[type="submit"] {
+            background: linear-gradient(to right, #f1c40f, #e67e22);
+            color: black;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background: darkgoldenrod;
+            transform: scale(1.1);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>HTML Basics</h1>
+
+        <h2>Headings and Paragraphs</h2>
+        <p>HTML stands for HyperText Markup Language and is used to create web pages.</p>
+
+        <h2>Lists</h2>
+        <h3>Ordered List</h3>
+        <ol>
+            <li>First item</li>
+            <li>Second item</li>
+            <li>Third item</li>
+        </ol>
+
+        <h3>Unordered List</h3>
+        <ul>
+            <li>Komali</li>
+            <li>Bhavana</li>
+            <li>Satya</li>
+        </ul>
+
+        <h2>Links</h2>
+        <p>Visit <a href="https://jalaacademy.com/" target="_blank">Jala Academy</a> to fill the gaps between academic education and the practical IT world in the current industry.</p>
+
+        <h2>Forms</h2>
+        <form>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" placeholder="Enter your name"><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" placeholder="Enter your email"><br><br>
+
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" cols="30" placeholder="Your message"></textarea><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+</body>
+</html>

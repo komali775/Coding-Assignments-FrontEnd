@@ -1,0 +1,117 @@
+<!-- 2. Apply different visibility by an element (visibility: hidden, visible, collapse) and use 
+different types of display for an element (display: none, inline, block, contents, list-item). -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visibility & Display Properties</title>
+    <style>
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            background: linear-gradient(to right, #eef2f3, #e3f2fd);
+            margin: 0;
+            padding: 20px;
+            color: #444;
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #007bff;
+            text-shadow: 2px 2px 5px rgba(0, 123, 255, 0.2);
+        }
+
+        h2 {
+            color: #ff6f61;
+        }
+
+        .container {
+            width: 60%;
+            margin: 20px auto;
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            font-size: 18px;
+            padding: 12px;
+            margin: 10px;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        p:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .visible {
+            background-color: #a2d5a2;
+        }
+
+        .hidden {
+            visibility: hidden;
+            background-color: #ffb6b6;
+        }
+
+        .collapse {
+            visibility: collapse;
+            background-color: #87ceeb;
+        }
+
+        .none {
+            display: none;
+        }
+
+        .inline {
+            display: inline;
+            background-color: #fdd835;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .block {
+            display: block;
+            background-color: #d3d3d3;
+        }
+
+        .contents {
+            display: contents;
+        }
+
+        .list-item {
+            display: list-item;
+            background-color: #f7a1c4;
+            padding: 5px;
+            list-style-type: square;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Visibility & Display Properties</h1>
+
+    <div class="container">
+        <h2>Visibility</h2>
+        <p class="visible">✅ This is a visible element.</p>
+        <p class="hidden">🚫 This is a hidden element (space is still occupied).</p>
+        <p class="collapse">🔻 This is a collapsed element (works for table elements).</p>
+    </div>
+
+    <div class="container">
+        <h2>Display</h2>
+        <p class="none">❌ This element has display: none (it won't be visible at all).</p>
+        <p class="inline">📌 This is an inline element.</p>
+        <p class="block">📦 This is a block element.</p>
+        <div class="contents">
+            <p>📝 This paragraph is inside a div with display: contents.</p>
+        </div>
+        <p class="list-item">📋 This is a list-item display type.</p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!-- 5. A page with multiple background images for an webpage or element and define their adjustable sizes. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Background Images</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            color: white;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #222;
+        }
+
+        .background-box {
+            width: 80%;
+            max-width: 800px;
+            height: 400px;
+            padding: 20px;
+            border-radius: 20px;
+            background: 
+                url('https://cdn.dribbble.com/userupload/6508147/file/original-11794da09cf2fda821918b0be52877cf.jpg?resize=400x0') top left / 200px 150px no-repeat,
+                url('https://png.pngtree.com/thumb_back/fw800/background/20240415/pngtree-night-deer-silhouette-against-the-backdrop-of-the-milky-way-beautiful-image_15659058.jpg') bottom right / 300px 200px no-repeat,
+                url('https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-deer-standing-by-the-river-free-photo.jpg?w=2210&quality=70') center / cover no-repeat;
+            backdrop-filter: blur(10px);
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+        }
+
+        .background-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            font-size: 28px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: 300;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px 15px;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="background-box">
+        <h1>Multiple Background Images</h1>
+        <p>This box contains three background images blended with a sleek design.</p>
+    </div>
+
+</body>
+</html>

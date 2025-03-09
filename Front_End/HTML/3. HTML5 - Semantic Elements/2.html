@@ -1,0 +1,164 @@
+<!-- 2. Develop a web page with the semantic elements <form>, <table> and <article> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic Elements: Form, Table & Article</title>
+    <style>
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #dfe9f3, #ffffff);
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+            color: #333;
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        form {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 50%;
+            margin: 20px auto;
+            text-align: left;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            background: linear-gradient(to right, #007bff, #0056b3);
+            color: white;
+            font-weight: bold;
+            border: none;
+            padding: 12px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        input[type="submit"]:hover {
+            background: #0056b3;
+            transform: scale(1.05);
+        }
+
+        table {
+            width: 60%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background: linear-gradient(to right, #007bff, #0056b3);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background: #ddd;
+            transition: background 0.3s ease;
+        }
+
+        article {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 60%;
+            margin: 20px auto;
+            text-align: left;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Using Semantic Elements: &lt;form&gt;, &lt;table&gt; &amp; &lt;article&gt;</h1>
+
+    <!-- Form Section -->
+    <form>
+        <h2>Contact Form</h2>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <!-- Table Section -->
+    <h2>Student Information Table</h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Course</th>
+        </tr>
+        <tr>
+            <td>Komali</td>
+            <td>21</td>
+            <td>Computer Science</td>
+        </tr>
+        <tr>
+            <td>Bhavana</td>
+            <td>22</td>
+            <td>Information Technology</td>
+        </tr>
+        <tr>
+            <td>Satya</td>
+            <td>20</td>
+            <td>Electronics</td>
+        </tr>
+    </table>
+
+    <!-- Article Section -->
+    <article>
+        <h2>About Semantic HTML</h2>
+        <p>Semantic HTML improves the <strong>structure</strong> and <strong>accessibility</strong> of webpages. Elements like `<form>`, `<table>`, and `<article>` make the content more meaningful.</p>
+        <p>Using semantic tags enhances SEO, improves readability, and ensures better browser compatibility.</p>
+    </article>
+
+</body>
+</html>

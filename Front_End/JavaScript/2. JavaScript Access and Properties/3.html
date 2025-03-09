@@ -1,0 +1,102 @@
+<!-- 3. Write a program for COUNTER. Whenever we click on a "Count" button, value should increment. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #ff9a8b, #ff6a88); 
+            text-align: center;
+            padding: 50px;
+            color: #2b2d42;
+        }
+
+        h1 {
+            font-size: 34px;
+            font-weight: 600;
+            color: #22223b;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            width: 50%;
+            margin: auto;
+            transition: all 0.3s ease;
+        }
+
+        .container:hover {
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+            transform: translateY(-4px);
+        }
+
+        #counter {
+            font-size: 50px;
+            font-weight: 700;
+            color: #ff3d5a;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+            transition: all 0.2s ease-in-out;
+        }
+
+        button {
+            background: linear-gradient(to right, #ff6a88, #ff4757); /* Vibrant Button */
+            color: white;
+            padding: 14px 28px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+            outline: none;
+        }
+
+        button:hover {
+            background: #ff4757;
+            transform: scale(1.07);
+            box-shadow: 0 7px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Simple Counter</h1>
+    <div class="container">
+        <p id="counter">0</p>
+        <button onclick="incrementCounter()">Count</button>
+    </div>
+
+    <script>
+        let count = 0;
+
+        function incrementCounter() {
+            count++;
+            let counterElement = document.getElementById("counter");
+            counterElement.textContent = count;
+
+            counterElement.style.transform = "scale(1.2)";
+            setTimeout(() => counterElement.style.transform = "scale(1)", 200);
+        }
+    </script>
+
+</body>
+</html>

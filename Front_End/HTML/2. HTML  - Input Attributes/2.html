@@ -1,0 +1,139 @@
+<!-- 2. HTML5 input Types type=number, range, color, date, file, time, month, week, email -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Input Types</title>
+    <style>
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #dfe9f3, #ffffff);
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(15px);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: 50%;
+            margin: 20px auto;
+            text-align: left;
+            transition: all 0.3s ease;
+        }
+
+        form:hover {
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+            color: #333;
+        }
+
+        input {
+            width: 95%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            outline: none;
+            transition: 0.3s ease;
+            font-size: 16px;
+        }
+
+        input:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+        }
+
+        input[type="color"] {
+            width: 80px;
+            height: 40px;
+            padding: 5px;
+            border: none;
+        }
+
+        input[type="range"] {
+            width: 95%;
+        }
+
+        input[type="submit"] {
+            background: linear-gradient(to right, #007bff, #0056b3);
+            color: white;
+            padding: 12px 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-size: 16px;
+            transition: 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background: #00479b;
+            transform: scale(1.05);
+        }
+
+        input[type="submit"]:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>HTML Input Types</h1>
+    
+    <form>
+        <!-- Number Input -->
+        <label for="number">Enter a Number:</label>
+        <input type="number" id="number" name="number" min="1" max="100" placeholder="Enter a number">
+
+        <!-- Range Input -->
+        <label for="range">Select a Range (1-100):</label>
+        <input type="range" id="range" name="range" min="1" max="100">
+
+        <!-- Color Input -->
+        <label for="color">Choose a Color:</label>
+        <input type="color" id="color" name="color">
+
+        <!-- Date Input -->
+        <label for="date">Select a Date:</label>
+        <input type="date" id="date" name="date">
+
+        <!-- File Input -->
+        <label for="file">Upload a File:</label>
+        <input type="file" id="file" name="file">
+
+        <!-- Time Input -->
+        <label for="time">Select a Time:</label>
+        <input type="time" id="time" name="time">
+
+        <!-- Month Input -->
+        <label for="month">Select a Month:</label>
+        <input type="month" id="month" name="month">
+
+        <!-- Week Input -->
+        <label for="week">Select a Week:</label>
+        <input type="week" id="week" name="week">
+
+        <!-- Email Input -->
+        <label for="email">Enter Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email">
+
+        <!-- Submit Button -->
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>

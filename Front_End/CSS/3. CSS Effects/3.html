@@ -1,0 +1,163 @@
+<!-- 3. Add positions to CSS block (static, relative, fixed, absolute and sticky). -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positioning</title>
+    <style>
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            background: linear-gradient(135deg, #f8f9fa, #e3f2fd);
+            color: #444;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 38px;
+            color: #ff6f61;
+            text-shadow: 2px 2px 5px rgba(255, 111, 97, 0.3);
+        }
+
+        h2 {
+            font-size: 24px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .box {
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            border-radius: 12px;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .box:hover {
+            transform: scale(1.02);
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .static-box {
+            background: #f1f1f1;
+            border-left: 5px solid #7e57c2;
+        }
+
+        .relative-box {
+            position: relative;
+            background: #bbdefb;
+            border-left: 5px solid #2196f3;
+            left: 30px;
+            top: 20px;
+        }
+
+        .fixed-box {
+            position: fixed;
+            background: #ffcccb;
+            border-left: 5px solid #e57373;
+            width: 100%;
+            text-align: center;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .absolute-container {
+            position: relative;
+            height: 250px;
+            border: 2px dashed #444;
+            width: 80%;
+            margin: 20px auto;
+            border-radius: 10px;
+            padding: 20px;
+            background: #e3f2fd;
+        }
+
+        .absolute-box {
+            position: absolute;
+            background: #c8e6c9;
+            border-left: 5px solid #4caf50;
+            padding: 15px;
+            border-radius: 10px;
+            top: 50px;
+            left: 50px;
+        }
+
+        .sticky-box {
+            position: sticky;
+            top: 10px;
+            background: #ffecb3;
+            border-left: 5px solid #ffa000;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>🌟 CSS Positioning 🌟</h1>
+
+    <!-- Static Position -->
+    <div class="box static-box">
+        <h2>Static Position</h2>
+        <p>This is a static box (default position).</p>
+    </div>
+
+    <!-- Relative Position -->
+    <div class="box relative-box">
+        <h2>Relative Position</h2>
+        <p>This box is positioned 30px to the right and 20px down.</p>
+    </div>
+
+    <!-- Fixed Position -->
+    <div class="box fixed-box">
+        <h2>Fixed Position</h2>
+        <p>This box stays at the top even when scrolling.</p>
+    </div>
+
+    <br><br><br><br> 
+
+    <!-- Absolute Position -->
+    <div class="absolute-container">
+        <h2>Absolute Position (Container)</h2>
+        <div class="box absolute-box">
+            <h2>Absolute Box</h2>
+            <p>This box is positioned inside the container.</p>
+        </div>
+    </div>
+
+    <!-- Sticky Position -->
+    <div class="box sticky-box">
+        <h2>Sticky Position</h2>
+        <p>This box sticks at the top when scrolling.</p>
+    </div>
+
+    <p>Scroll down to see how fixed and sticky positions behave.</p>
+    <p>Keep scrolling...</p>
+    <p>Keep scrolling...</p>
+    <p>Keep scrolling...</p>
+    <p>Keep scrolling...</p>
+    <p>Keep scrolling...</p>
+    <p>Keep scrolling...</p>
+    <p>Keep scrolling...</p>
+    <p>Keep scrolling...</p>
+    <p>Keep scrolling...</p>
+    <p>Keep scrolling...</p>
+    <p>Keep scrolling...</p>
+    <p>Keep scrolling...</p>
+    <p>Keep scrolling...</p>
+    <p>Keep scrolling...</p>
+    <p>Keep scrolling...</p>
+    <p>Keep scrolling...</p>
+    <p>Keep scrolling...</p>
+    <p>Keep scrolling...</p>
+    <p>Keep scrolling...</p>
+
+</body>
+</html>
